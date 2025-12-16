@@ -12,8 +12,8 @@ public class User {
         this.password = password;
     }
 
-    public String setUsername() { return username; }
-    public String setEmail() { return email; }
-    public String setPassword() { return password; }
+    public String getUsername() { return username; }
+    public String getEmail() { return email; }
+    public String getPassword() { return password; }
 
 }
