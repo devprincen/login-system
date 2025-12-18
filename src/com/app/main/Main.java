@@ -22,14 +22,12 @@ public class Main {
             sc.nextLine();
             
             switch (opt) {
-                case 1 -> RegisterUI.register();
-                case 2 -> LoginUI.login();
-                case 3 -> System.exit(0);
+                case 1-> RegisterUI.register();
+                case 2-> LoginUI.login();
+                case 3-> System.exit(0);
 
                 default -> System.out.println("Enter Valid option! "); 
             }
-        sc.close();
         }        
     }
-     
 }

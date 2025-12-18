@@ -21,6 +21,5 @@ public class LoginUI {
         } else {
             System.out.println("Invalid Credentials! ");
         }
-        sc.close();
     }
 }

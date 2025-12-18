@@ -3,7 +3,6 @@ package com.app.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import com.app.db.DBConnection;
 import com.app.model.User;
@@ -11,7 +10,7 @@ import com.app.model.User;
 public class UserDAO {
 
     public boolean register(User user) {
-        String qur = "INSERT INTO users(username, email, password) VALUES(?, ?, ?, ?)";
+        String qur = "INSERT INTO users(username, email, password) VALUES(?, ?, ?)";
 
         try (Connection con = DBConnection.getConnection();
             PreparedStatement ps = con.prepareStatement(qur)){
@@ -22,7 +21,8 @@ public class UserDAO {
 
             return ps.executeUpdate() > 0;
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
     }

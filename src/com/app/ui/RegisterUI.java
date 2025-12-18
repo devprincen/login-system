@@ -19,13 +19,12 @@ public class RegisterUI {
         System.out.print("Password: ");
         String password = sc.nextLine();
 
-        boolean success = service.ragister(username, email, password);
+        boolean success = service.register(username, email, password);
 
         if(success) {
             System.out.println("Registration Successfully! ");
         } else {
             System.out.println("Registration Failed! ");
         }
-        sc.close();
     }
 }
